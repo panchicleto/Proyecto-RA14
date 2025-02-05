@@ -82,7 +82,7 @@
             gifTriste.style.display = "block";
         }
 
-      function aceptar() {
+   function aceptar() {
     texto.innerText = "¡Sabía que dirías que sí! 💖 Te Amo 💖";
     gif.style.display = "block";
     gifTriste.style.display = "none";
@@ -91,25 +91,26 @@
     btnSi.style.display = "none";
     btnNo.style.display = "none";
     
-    // Mostrar el poema
+    // Mostrar los poemas debajo del GIF
     let poema = document.getElementById("poema");
     poema.style.display = "block";
-    poema.innerText = "Hoy es el día en que mi amor te quiero decir,\n"
-                    + "no solo en palabras, sino en todo lo que soy para ti.\n"
-                    + "Eres mi razón, mi alegría, mi paz,\n"
-                    + "y en este San Valentín, te entrego mi alma en paz.\n\n"
-                    + "Desde que llegaste, mi vida tiene color,\n"
-                    + "tu sonrisa es mi refugio, mi sol, mi amor.\n"
-                    + "No hay regalo más grande que tenerte a ti,\n"
-                    + "y en este día quiero recordártelo, feliz de vivir.\n\n"
-                    + "Eres la dueña de mi corazón y mi mente,\n"
-                    + "la razón por la que sonrío, la que me hace fuerte.\n"
-                    + "Hoy celebro lo que somos, hoy celebro tu ser,\n"
-                    + "y te prometo que mi amor por ti no va a perecer.\n\n"
-                    + "Feliz San Valentín, mi amor eterno,\n"
-                    + "por siempre contigo, mi cielo, mi invierno.\n"
-                    + "Porque mi corazón es solo para ti,\n"
-                    + "hoy y siempre, en este viaje sin fin.";
+    poema.innerHTML = 
+         "En tu mirada descubro el universo entero,<br>"
+        + "un océano de estrellas que brillan sin miedo.<br>"
+        + "Tus ojos son faros en mi noche perdida,<br>"
+        + "una luz infinita que guía mi vida.<br><br>"
+        + "Tus labios son versos escritos en fuego,<br>"
+        + "susurros de amor que en mi alma navego.<br>"
+        + "Cada beso tuyo es un sueño despierto,<br>"
+        + "un dulce refugio, un mágico puerto.<br><br>"
+        + "Eres la brisa que calma mi pena,<br>"
+        + "la flor más hermosa en mi eterna primavera.<br>"
+        + "Mi amor por ti no tiene fronteras,<br>"
+        + "es un lazo eterno, un alma sincera.<br><br>"
+        + "Así que quédate siempre a mi lado,<br>"
+        + "que juntos haremos un mundo encantado.<br>"
+        + "Donde el amor sea nuestro destino,<br>"
+        + "y cada latido, un eterno camino.";
 }
 
 
