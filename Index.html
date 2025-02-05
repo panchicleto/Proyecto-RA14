@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Valentín</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+        }
+        h1 {
+            font-size: 3em;
+            color: #ff3366;
+        }
+        .container {
+            position: relative;
+            display: inline-block;
+        }
+        .btn {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        #btnSi {
+            background-color: #ff6699;
+            color: white;
+        }
+        #btnNo {
+            background-color: #999;
+            color: white;
+        }
+        #gif, #gifTriste {
+    display: none;
+    margin-top: 20px;
+    width: 300px; /* Asegura el mismo tamaño para ambos GIFs */
+    height: 300px; /* Asegura el mismo tamaño para ambos GIFs */
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    </style>
+</head>
+<body>
+    <h1>¿Quieres ser mi San Valentín?</h1>
+<img id="gif" src="https://usagif.com/wp-content/uploads/anime-love-53.gif" alt="Love Gif" style="display: none;">
+<img id="gifTriste" src="" alt="Sad Gif" style="display: none;">
+<p id="poema" style="display:none; font-size: 1.2em; color: #ff3366; margin-top: 20px;"></p> <!-- Poema debajo del gif -->
+<div class="container">
+    <button id="btnSi" class="btn" onclick="aceptar()">Sí</button>
+    <button id="btnNo" class="btn" onclick="mostrarGifTriste()">No</button>
+</div>
+
+    
+    <script>
+        let btnSi = document.getElementById("btnSi");
+        let gif = document.getElementById("gif");
+        let gifTriste = document.getElementById("gifTriste");
+        let texto = document.querySelector("h1");
+        let siSize = 20;
+        
+        let sadGifs = [
+            "https://media.tenor.com/P2AQHWkWvYwAAAAM/bugs-bunny-crying.gif",
+            "https://i.pinimg.com/originals/02/6a/0a/026a0a29654426f6047e60ac61ab41fc.gif",
+            "https://media.tenor.com/p_wqjteO34MAAAAM/love-amor.gif",
+            "https://i.pinimg.com/originals/bc/87/02/bc870200c00780a3363c59cdb3e90488.gif"
+        ];
+
+        function mostrarGifTriste() {
+            siSize += 10;
+            btnSi.style.fontSize = `${siSize}px`;
+            
+            let randomGif = sadGifs[Math.floor(Math.random() * sadGifs.length)];
+            gifTriste.src = randomGif;
+            gifTriste.style.display = "block";
+        }
+
+      function aceptar() {
+    texto.innerText = "¡Sabía que dirías que sí! 💖 Te Amo 💖";
+    gif.style.display = "block";
+    gifTriste.style.display = "none";
+    
+    // Ocultar los botones
+    btnSi.style.display = "none";
+    btnNo.style.display = "none";
+    
+    // Mostrar el poema
+    let poema = document.getElementById("poema");
+    poema.style.display = "block";
+    poema.innerText = "Hoy es el día en que mi amor te quiero decir,\n"
+                    + "no solo en palabras, sino en todo lo que soy para ti.\n"
+                    + "Eres mi razón, mi alegría, mi paz,\n"
+                    + "y en este San Valentín, te entrego mi alma en paz.\n\n"
+                    + "Desde que llegaste, mi vida tiene color,\n"
+                    + "tu sonrisa es mi refugio, mi sol, mi amor.\n"
+                    + "No hay regalo más grande que tenerte a ti,\n"
+                    + "y en este día quiero recordártelo, feliz de vivir.\n\n"
+                    + "Eres la dueña de mi corazón y mi mente,\n"
+                    + "la razón por la que sonrío, la que me hace fuerte.\n"
+                    + "Hoy celebro lo que somos, hoy celebro tu ser,\n"
+                    + "y te prometo que mi amor por ti no va a perecer.\n\n"
+                    + "Feliz San Valentín, mi amor eterno,\n"
+                    + "por siempre contigo, mi cielo, mi invierno.\n"
+                    + "Porque mi corazón es solo para ti,\n"
+                    + "hoy y siempre, en este viaje sin fin.";
+}
+
+
+    </script>
+</body>
+</html>
+
